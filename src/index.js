@@ -3,37 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 
+// browser router using react router dom
 import {
   createBrowserRouter,
   RouterProvider,
-  Outlet
 } from "react-router-dom";
-import AllTasks from './components/AllTasks';
+// import App from './App';
+import Update from './components/Update';
 import Error from './components/Error';
-import Child1 from './components/Child1';
-import Child2 from './components/Child2';
-
-
-const appRouter = createBrowserRouter([
+const router = createBrowserRouter([
   {
-    
+    path: "/",
     errorElement: <Error/>,
+
     children: [
       {
-        path: '/',
-        element: <App/>,
-        children: [
-          {
-            path: "/alltasks",
-            element: <AllTasks />
-          }
-        ]
+        path: "/",
+        element: <App />,
+    
       },
       {
-        path: "/error",
-        element: <Error/>
-      }
-     
+        path: "/update/:id",
+        element: <Update />,
+      },
     ],
   },
 ]);
@@ -41,6 +33,6 @@ const appRouter = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={appRouter}></RouterProvider>
+  <RouterProvider router={router} />
   </React.StrictMode>
 );
