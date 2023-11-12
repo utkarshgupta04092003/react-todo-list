@@ -5,8 +5,8 @@ function Taskform({AddTask}) {
 
     const [taskName, setTaskName]  = useState('');
     const [taskCategory, setTaskCategory]  = useState('');
-    const [taskDeadline, setTaskDeadline]  = useState();
-
+    const [taskDeadline, setTaskDeadline]  = useState('');
+   
     
     function Add(){
 
@@ -22,6 +22,9 @@ function Taskform({AddTask}) {
 
 
 
+    
+
+
     return (
         <div className="border border-gray-500">
             <h2 className="font-bold text-2xl text-center p-5">Todo list</h2>
@@ -29,7 +32,7 @@ function Taskform({AddTask}) {
             <div>
 
                 <div className="w-full flex flex-col p-2 ">
-                    <label for="taskName" className="font-bold text-xl">
+                    <label htmlFor="taskName" className="font-bold text-xl">
                         Task Name
                     </label>
                     <input
@@ -46,11 +49,11 @@ function Taskform({AddTask}) {
                 
                 <div className="flex">
                     <div className="w-1/2  flex flex-col p-2">
-                        <label for="category" className="font-bold text-xl">
+                        <label htmlFor="category" className="font-bold text-xl">
                             Category
                         </label>
 
-                        <select className="border border-gray-400 mt-2 p-1"
+                        <select className="border border-gray-400 mt-2 p-1" id="category"
                         required
                         value={taskCategory} 
                         onChange={(e)=>setTaskCategory(e.target.value)}>
@@ -64,7 +67,7 @@ function Taskform({AddTask}) {
                     </div>
 
                     <div className="w-1/2  flex flex-col p-2 ">
-                        <label for="deadline" className="font-bold text-xl">
+                        <label htmlFor="deadline" className="font-bold text-xl">
                             Deadline
                         </label>
                         <input

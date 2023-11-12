@@ -11,6 +11,9 @@ import {
 // import App from './App';
 import Update from './components/Update';
 import Error from './components/Error';
+
+
+import TaskContextProvider from './utils/TaskContextProvider';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +36,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <RouterProvider router={router} />
+
+    <TaskContextProvider>
+        <RouterProvider router={router} />
+      </TaskContextProvider>
   </React.StrictMode>
 );

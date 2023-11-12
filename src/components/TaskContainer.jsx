@@ -9,7 +9,7 @@ function TaskContainer({tasks, DeleteTask}) {
 
         
         {tasks.map((task) => (
-            <SingleTask task={task} DeleteTask={DeleteTask}/>    
+            <SingleTask oneTask ={task} DeleteTask={DeleteTask} key={task.id}/>    
         ))}
 
         </div>

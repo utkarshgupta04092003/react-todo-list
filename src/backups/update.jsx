@@ -4,13 +4,16 @@ import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { TaskContext } from "../utils/TaskContext";
 
-import {useNavigate} from "react-router-dom"
-
 function Update() {
 
     const { id } = useParams();
     const { task, updateTask } = useContext(TaskContext);
-    const navigate = useNavigate();
+
+    // console.log('all task: ', task);
+    // console.log("id: ", typeof(+id))
+    // let currentTask = task.map((t)=>(
+    //     t.id == (+id)
+    // ))
     let index;
     for(let i=0;i<task.length;i++){
         if(task[i].id == (+id)){
@@ -31,7 +34,7 @@ function Update() {
 
     const [taskName, setTaskName]  = useState(currentTask.taskName);
     const [taskCategory, setTaskCategory]  = useState(currentTask.taskCategory);
-    const [taskDeadline, setTaskDeadline]  = useState('');
+    const [taskDeadline, setTaskDeadline]  = useState();
 
 
     function Update(){
@@ -41,7 +44,7 @@ function Update() {
             return;
         }
 
-
+        
         console.log("update called");
         for(let i=0;i<task.length;i++){
             if(task[i].id == (+id)){
@@ -54,9 +57,7 @@ function Update() {
 
         updateTask(task);
         console.log('update executed');
-        console.log(task);
-        navigate(-1);
-        // history.goBack();
+        console.log(task)
     }
 
  
@@ -67,7 +68,7 @@ function Update() {
             <div>
 
                 <div className="w-full flex flex-col p-2 ">
-                    <label htmlFor="taskName" className="font-bold text-xl">
+                    <label for="taskName" className="font-bold text-xl">
                         Task Name
                     </label>
                     <input
@@ -84,7 +85,7 @@ function Update() {
 
                 <div className="flex">
                     <div className="w-1/2  flex flex-col p-2">
-                        <label htmlFor="category" className="font-bold text-xl">
+                        <label for="category" className="font-bold text-xl">
                             Category
                         </label>
 
@@ -102,7 +103,7 @@ function Update() {
                     </div>
 
                     <div className="w-1/2  flex flex-col p-2 ">
-                        <label htmlFor="deadline" className="font-bold text-xl">
+                        <label for="deadline" className="font-bold text-xl">
                             Deadline
                         </label>
                         <input
