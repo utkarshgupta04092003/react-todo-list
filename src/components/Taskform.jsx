@@ -1,4 +1,7 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TaskContext } from "../utils/TaskContext";
+import { useNavigate } from "react-router-dom";
+import Header from "./Header";
 
 function Taskform({AddTask}) {
 
@@ -6,11 +9,31 @@ function Taskform({AddTask}) {
     const [taskName, setTaskName]  = useState('');
     const [taskCategory, setTaskCategory]  = useState('');
     const [taskDeadline, setTaskDeadline]  = useState('');
+    const navigate = useNavigate();
    
+    const {task, updateTask} = useContext(TaskContext);
+    function AddTask(title,category,deadline){
+
+        console.log("all tasks from app",task.length != 0 ? task[0].id : 0);
+        // const lastIndex = task? task[0].id+1 : 0;
+        const lastIndex = task.length != 0 ? task[0].id+1 : 0;
+        const prevTasks = task;
+        prevTasks.unshift({
+          id: lastIndex,
+          taskName: title,
+          taskCategory: category,
+          taskDeadline: deadline,
+          isCompleted: false,
+        })
+        updateTask(prevTasks);
+        // setRender(render+1);
+        navigate(-1);
+        
+      }
     
     function Add(){
 
-        if(taskName == '' || taskCategory == '' || taskDeadline === undefined){
+        if(taskName == '' || taskCategory == '' || taskDeadline === ''){
             alert('Please Enter All fields. !');
             return;
         }
@@ -26,7 +49,8 @@ function Taskform({AddTask}) {
 
 
     return (
-        <div className="border border-gray-500">
+        <div className="border border-gray-500 w-1/2 m-auto  text-gray-600">
+            <Header/>
             <h2 className="font-bold text-2xl text-center p-5">Todo list</h2>
 
             <div>

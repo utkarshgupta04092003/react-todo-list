@@ -4,7 +4,7 @@ import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { TaskContext } from "../utils/TaskContext";
 
-import {useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom";
 
 function Update() {
 
@@ -36,7 +36,7 @@ function Update() {
 
     function Update(){
 
-        if(taskName == '' || taskCategory == '' || taskDeadline === undefined){
+        if(taskName == '' || taskCategory == '' || taskDeadline === ''){
             alert('Please Enter All fields. !');
             return;
         }
@@ -61,7 +61,7 @@ function Update() {
 
  
     return (
-        <div className="border border-gray-500 w-3/4 m-auto mt-5">
+        <div className="border border-gray-500 w-1/2 m-auto mt-5 text-gray-600">
             <h2 className="font-bold text-2xl text-center p-5">Todo list</h2>
 
             <div>

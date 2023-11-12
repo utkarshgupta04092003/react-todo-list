@@ -36,7 +36,7 @@ function SingleTask({oneTask, DeleteTask}){
             <div className={isCompleted?
                 "line-through border-gray-500 font-bold":
                 "border-gray-500 font-bold"} >
-                {oneTask.id}-{oneTask.taskName}
+                {oneTask.taskName}
             </div>
             <div>
                 {oneTask.taskCategory}

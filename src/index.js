@@ -14,6 +14,7 @@ import Error from './components/Error';
 
 
 import TaskContextProvider from './utils/TaskContextProvider';
+import Taskform from './components/Taskform';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
         path: "/update/:id",
         element: <Update />,
       },
+      {
+        path: "/addTask",
+        element: <Taskform/>
+      }
     ],
   },
 ]);
