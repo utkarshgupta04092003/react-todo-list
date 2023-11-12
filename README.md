@@ -2,8 +2,29 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshots
 
-## Preview
+#### Home Page (All tasks)
+![image](https://github.com/utkarshgupta04092003/react-todo-list/assets/63789702/68d0f25d-c783-44f0-b42e-6b2ee5f42bea)
+
+#### Home Page (Completed Tasks)
+![image](https://github.com/utkarshgupta04092003/react-todo-list/assets/63789702/eec3163b-1491-4fb0-929b-7c285f5b92e3)
+
+#### Add a new Task
+![image](https://github.com/utkarshgupta04092003/react-todo-list/assets/63789702/adc2e18a-7511-4dde-9a81-c9203eb4aecb)
+
+#### Mark as Complete Task
+![image](https://github.com/utkarshgupta04092003/react-todo-list/assets/63789702/41fa2503-dcdc-4676-b786-c7f5cd09215b)
+
+
+#### Home Page After deleting the task
+![image](https://github.com/utkarshgupta04092003/react-todo-list/assets/63789702/e2b4ea33-e87f-4d56-9b42-dfe6f7e2a587)
+
+#### Update Particular Task
+![image](https://github.com/utkarshgupta04092003/react-todo-list/assets/63789702/b37ddcef-fb12-4c1a-8987-8252cfa32437)
+
+
+## Preview video
 
 https://github.com/utkarshgupta04092003/react-todo-list/assets/63789702/e373e31a-6426-4140-a83e-06f811836cfc
 
