@@ -16,15 +16,19 @@ A Todo List application built with React that allows you to manage your tasks ef
 
 ## Features
 
-- **Task Management:** Create, update, and delete tasks with titles, categories, and deadlines.
-- **Category Filtering:** View tasks based on their categories.
-- **Deadline Tracking:** Keep track of task deadlines.
+- **Create Task:** Create tasks with titles, categories, and deadlines.
+- **Delete Task:** Delete any particular task.
+- **Update Task:** Update any particular task.
+- **Complete Task:** Mark a particular task as completed.
+- **Filter Task:** Filter the tasks based on completion.
+- **Show Task:** Show all the task.
 - **React Router:** Utilizes React Router for navigation between task creation and updating.
 
 
 ## Screenshots
 
 Home Page (All tasks)
+
 ![image](https://github.com/utkarshgupta04092003/react-todo-list/assets/63789702/68d0f25d-c783-44f0-b42e-6b2ee5f42bea)
 
 Home Page (Completed Tasks)
@@ -80,7 +84,8 @@ npm start
 
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com/) - For client-side routing.
-
+- [Context API](https://legacy.reactjs.org/docs/context.html) - For state management
+  
 ## Routing
 
 ### Creating a Todo
