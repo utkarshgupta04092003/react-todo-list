@@ -14,5 +14,12 @@
       taskDeadline: "10/10/2000",
       isCompleted: false,
     },
+    {
+      id: 3,
+      taskName: "shoppinh ",
+      taskCategory: "Home",
+      taskDeadline: "10/10/2000",
+      isCompleted: false,
+    },
   ];
 }
